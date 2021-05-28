@@ -28,7 +28,7 @@ public class Main implements ActionListener {
          button = new JButton("Login");
          register = new JButton("Register");
          panel = new JPanel();
-         password = new JLabel("Password");
+          password = new JLabel("Password");
          success = new JLabel();
          field = new JTextField(20);
          // testg
@@ -73,12 +73,7 @@ public class Main implements ActionListener {
         panel.add(field);
         panel.add(password);
         frame.setVisible(true);
-        /* String password = fieldPass.getText();
-        FileWriter fw1 = new FileWriter(new File(fieldPass + ".txt"));
-        fw1.write(String.valueOf(fieldPass));
-        fw1.close();
 
-         */
     }
    
 
@@ -86,13 +81,13 @@ public class Main implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if(button.getModel().isArmed()){
-            String user = field.getText();
-            String password = fieldPass.getText();
+                String user = field.getText();
+                String password = fieldPass.getText();
 
-            if(password == null){
+                if(password == null){
                 System.out.println("Hej");
             }
-            System.out.println(user + "," + password);
+            System.out.println( "Username: " + user  + " \n Password :" + password);
 
 
         }
@@ -109,25 +104,35 @@ public class Main implements ActionListener {
             JLabel password2 = new JLabel();
 
             JFrame frame2 = new JFrame();
+
             JPanel panel2 = new JPanel();
 
             JTextField field2 = new JTextField();
+
             JPasswordField fieldPass2 = new JPasswordField(20);
 
             frame2.setSize(300, 300);
+
             frame2.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+            
+
             frame2.add(panel2);
+
             frame2.setVisible(true);
 
             System.out.println("f");
+
             panel2.setLayout(null);
 
             label2.setText("Username");
+
             label2.setBounds(10, 10, 80, 30);
 
             field2.setBounds(100, 20, 165, 25);
             password2.setText("Password");
+
             password2.setBounds(10, 50, 80, 25);
+
             fieldPass2.setBounds(100, 50, 165, 25);
 
             panel2.add(password2);
