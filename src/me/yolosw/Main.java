@@ -7,15 +7,15 @@ import java.awt.event.ActionListener;
 
 public class Main implements ActionListener {
 
-    private static JLabel label;
-    private static JFrame frame;
-    private static JButton button;
-    private static JButton register;
-    private static JPanel panel;
-    private static JLabel password;
-    private static JLabel success;
-    private static JPasswordField fieldPass;
-    private static JTextField field;
+    public static JLabel label;
+    public static JFrame frame;
+    public static JButton button;
+    public static JButton register;
+    public static JPanel panel;
+    public static JLabel password;
+    public static JLabel success;
+    public static JPasswordField fieldPass;
+    public static JTextField field;
 
 
     public static void main(String[] args) {
@@ -114,7 +114,7 @@ public class Main implements ActionListener {
             frame2.setSize(300, 300);
 
             frame2.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-            
+
 
             frame2.add(panel2);
 
