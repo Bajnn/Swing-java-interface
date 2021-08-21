@@ -20,18 +20,15 @@ public class Main implements ActionListener {
 
     public static void main(String[] args) {
 
+        label = new JLabel();
+        frame = new JFrame();
+        button = new JButton("Login");
+        register = new JButton("Register");
+        panel = new JPanel();
+        password = new JLabel("Password");
+        success = new JLabel();
+        field = new JTextField(20);
 
-
-
-         label = new JLabel();
-         frame = new JFrame();
-         button = new JButton("Login");
-         register = new JButton("Register");
-         panel = new JPanel();
-          password = new JLabel("Password");
-         success = new JLabel();
-         field = new JTextField(20);
-         // testg
 
         frame.setSize(300, 300);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -39,15 +36,11 @@ public class Main implements ActionListener {
 
         panel.setLayout(null);
 
+
         label.setText("Username");
         label.setBounds(10, 10, 80, 30);
 
-
-
-
         field.setBounds(100, 20, 165, 25);
-
-
 
         password.setBounds(10, 50, 80, 25);
         fieldPass = new JPasswordField(20);
@@ -57,8 +50,6 @@ public class Main implements ActionListener {
         button.addActionListener(new Main());
         register.addActionListener(new Main());
         register.setBounds(100, 100, 100, 25);
-
-
 
 
         success = new JLabel("");
@@ -73,79 +64,26 @@ public class Main implements ActionListener {
         panel.add(field);
         panel.add(password);
         frame.setVisible(true);
-
     }
-   
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        /*
+       When pressed opens another panel/frame so you can register
+       RegisterFrame is the class the method is being called from
+         */
+        if (register.getModel().isArmed()) {
+            RegisterFrame.RegisterPanel();
+            String user = field.getText();
+            String password = fieldPass.getText();
 
-        if(button.getModel().isArmed()){
-                String user = field.getText();
-                String password = fieldPass.getText();
-
-                if(password == null){
-                System.out.println("Hej");
-            }
-            System.out.println( "Username: " + user  + " \n Password :" + password);
+            System.out.println("Username: " + user + " \n Password :" + password);
 
 
         }
 
-        if(register.getModel().isArmed()){
-            /*
-            This opens a GUI when you click register
-             */
 
-            register.setBounds(0, 0, 0, 0);
-            panel.remove(register);
-            frame.remove(register);
-            JLabel label2 = new JLabel();
-            JLabel password2 = new JLabel();
-
-            JFrame frame2 = new JFrame();
-
-            JPanel panel2 = new JPanel();
-
-            JTextField field2 = new JTextField();
-
-            JPasswordField fieldPass2 = new JPasswordField(20);
-
-            frame2.setSize(300, 300);
-
-            frame2.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-
-
-            frame2.add(panel2);
-
-            frame2.setVisible(true);
-
-            System.out.println("f");
-
-            panel2.setLayout(null);
-
-            label2.setText("Username");
-
-            label2.setBounds(10, 10, 80, 30);
-
-            field2.setBounds(100, 20, 165, 25);
-            password2.setText("Password");
-
-            password2.setBounds(10, 50, 80, 25);
-
-            fieldPass2.setBounds(100, 50, 165, 25);
-
-            panel2.add(password2);
-            panel2.add(label2);
-            panel2.add(password2);
-            panel2.add(fieldPass2);
-            panel2.add(field2);
-
-
-            /*
-            Do not type in any real passwords
-             */
-        }
     }
 
 }
