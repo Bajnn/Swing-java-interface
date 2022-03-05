@@ -19,7 +19,7 @@ public class Main implements ActionListener {
 
 
     public static void main(String[] args) {
-                LoginFrame.LoginPanel();
+        LoginFrame.LoginPanel();
 
     }
 
@@ -30,6 +30,7 @@ public class Main implements ActionListener {
        When button pressed opens another panel/frame so you can register
        RegisterFrame is the class the method is being called from
          */
+
         if (registerButton.getModel().isArmed()) {
             RegisterFrame.RegisterPanel();
             String user = field.getText();
@@ -41,6 +42,18 @@ public class Main implements ActionListener {
         }
 
 
+        if(loginButton.getModel().isArmed()){
+
+
+           /*
+           should check if the username and password are correct
+
+             maybe start a server and check if the  are valid
+             if correct then open the main frame
+             */
+
+            MainFrame.MainFrame();
+        }
     }
 
 }
