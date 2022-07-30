@@ -17,10 +17,12 @@ public class Main implements ActionListener {
     public static JPasswordField fieldPass;
     public static JTextField field;
 
+    public static JCheckBox checkBox;
+    public static JInternalFrame internalFrame;
 
     public static void main(String[] args) {
         LoginFrame.LoginPanel();
-
+        // MainFrame.MainFrame();
     }
 
 

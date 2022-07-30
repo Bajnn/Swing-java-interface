@@ -2,9 +2,9 @@ package me.yolosw;
 
 import javax.swing.*;
 
-public class LoginFrame  extends  Main{
+public class LoginFrame extends Main {
 
-    public static void LoginPanel(){
+    public static void LoginPanel() {
 
         label = new JLabel();
         frame = new JFrame();
@@ -41,7 +41,10 @@ public class LoginFrame  extends  Main{
         success = new JLabel("");
         success.setBounds(10, 110, 300, 25);
 
+
 // after logging in  destroy panels and create a new one
+
+
         panel.add(success);
         panel.add(registerButton);
         panel.add(loginButton);
@@ -51,5 +54,8 @@ public class LoginFrame  extends  Main{
         panel.add(password);
         frame.setVisible(true);
 
+
     }
+
+
 }

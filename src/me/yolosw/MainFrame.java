@@ -6,30 +6,34 @@ import java.awt.*;
 public class MainFrame  extends Main{
     public static void MainFrame(){
         JFrame frame = new JFrame();
-        JLabel label = new JLabel("ff text");
+        JLabel label = new JLabel("Hej");
         JPanel panel = new JPanel();
         JTextField textField = new JTextField(10);
-// IDK why it has to be set visible because it should manually be true but no on this library
+        String f = textField.getText();
 
-        frame.setVisible(true);
+        boolean onOff = true;
 
 
-
-        frame.setSize(300,300);
+        frame.setSize(300, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
-        label.setBounds(10,10,80,25);
+        label.setBounds(10, 10, 80, 25);
         panel.setLayout(null);
 
-        textField.setBounds(10,100,100,20);
-        textField.setFont(new Font("Arial", Font.PLAIN, 20));
-
+        label.setBounds(10, 10, 800, 25);
+        label.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 
 
         panel.add(textField);
         panel.add(label);
 
 
+        if (MainFrame.loginButton.getModel().isPressed()) {
+            onOff = false;
+        }
+
+        // IDK why it has to be set visible because it should manually be true but no on this library
+        frame.setVisible(onOff);
 
 
     }
